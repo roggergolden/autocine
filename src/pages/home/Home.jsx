@@ -13,7 +13,7 @@ import Movie7 from '../../assets/thor.jpg';
 import Movie8 from '../../assets/matrix.jpg';
 import Movie9 from '../../assets/starwars.jpg';
 import Movie10 from '../../assets/avatar.jpg';
-import HeroImage from '../../assets/interestelar.png';
+import HeroImage from '../../assets/venon2.jpg';
 import usePeliculas from '../../hooks/usePeliculas';
 import useFunciones from '../../hooks/useFunciones';
 import './Home.css';
@@ -50,9 +50,7 @@ const Hero = () => {
         }}
       />
       <div style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
-        <Typography variant="h3" gutterBottom>
-          Bienvenidos al AutoCine
-        </Typography>
+        
         <Link to="/peliculas">
           <Button variant="contained" color="primary" size="large">
             Ver Películas
@@ -108,7 +106,7 @@ const Home = () => {
     <div className="home-container">
       <Hero />
 
-      <div style={{ padding: '20px', display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '40px' }}>
+      <div className="filter-container">
         <FormControl variant="outlined" style={{ minWidth: 200 }}>
           <InputLabel>Seleccionar Película</InputLabel>
           <Select value={selectedMovie} onChange={handleMovieChange} label="Seleccionar Película">
@@ -130,6 +128,7 @@ const Home = () => {
         </LocalizationProvider>
       </div>
 
+
       <Typography variant="h4" align="center" gutterBottom style={{ marginBottom: '20px' }}>
         Películas Disponibles
       </Typography>
@@ -137,37 +136,32 @@ const Home = () => {
       <Grid2 container spacing={4} justifyContent="center">
         {filteredMovies.map((movie, index) => (
           <Grid2 item xs={12} sm={6} md={3} lg={3} key={movie.id_pelicula || index}>
-            <Card elevation={3} className="movie-card">
-              <Link to={`/peliculas/${movie.id_pelicula}`} className="no-decoration-link" state={{ image: images[index % images.length] }}>
-                <CardMedia
-                  component="img"
-                  height="300"
-                  image={images[index % images.length]} 
-                  alt={movie.titulo}
-                  className="movie-poster"
-                />
-                <CardContent>
-                  <Typography variant="h5" align="center" gutterBottom>
-                    {movie.titulo}
-                  </Typography>
-                  <Typography variant="body1" align="center" color="textSecondary" gutterBottom>
-                    Director: {movie.director}
-                  </Typography>
-                  <Typography variant="body1" align="center" color="textSecondary" gutterBottom>
-                    Duración: {movie.duracion} min
-                  </Typography>
-                  <Typography variant="body1" align="center" color="textSecondary" gutterBottom>
-                    Fecha de Estreno: {new Date(movie.fecha_estreno).toLocaleDateString()}
-                  </Typography>
-                </CardContent>
-              </Link>
-              <IconButton
-                aria-label="delete"
-                sx={{ position: 'absolute', top: 8, right: 8 }}
-              >
-                <DeleteIcon />
-              </IconButton>
-            </Card>
+            <Card sx={{ backgroundColor: '#292929' }} elevation={3} className="movie-card">
+  <Link to={`/peliculas/${movie.id_pelicula}`} className="no-decoration-link" state={{ image: images[index % images.length] }}>
+    <CardMedia
+      component="img"
+      height="300"
+      image={images[index % images.length]} 
+      alt={movie.titulo}
+      className="movie-poster"
+    />
+    <CardContent>
+      <Typography variant="h5" align="center" gutterBottom>
+        {movie.titulo}
+      </Typography>
+      <Typography variant="body1" align="center" color="textsPrimary" gutterBottom>
+        Director: {movie.director}
+      </Typography>
+      <Typography variant="body1" align="center" color="textsPrimary" gutterBottom>
+        Duración: {movie.duracion} min
+      </Typography>
+      <Typography variant="body1" align="center" color="textsPrimary" gutterBottom>
+        Fecha de Estreno: {new Date(movie.fecha_estreno).toLocaleDateString()}
+      </Typography>
+    </CardContent>
+  </Link>
+</Card>
+
           </Grid2>
         ))}
       </Grid2>

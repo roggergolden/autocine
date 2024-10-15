@@ -1,23 +1,35 @@
 .pelicula-card {
-    background-color: #292929;
-    color: #ffffff;
-    border: 1px solid #ff3d00;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .pelicula-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .pelicula-poster {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
+  background-color: #292929 !important; /* Fondo oscuro */
+  color: #ffffff !important; /* Texto blanco */
+  border: 1px solid #ff3d00 !important; /* Borde rojo brillante */
+  padding: 20px !important;
+  margin: 10px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Sombra ligera */
+}
+
+
+.pelicula-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al hacer hover */
+}
+
+.pelicula-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  object-fit: cover; /* Para que la imagen se ajuste bien */
+}
+
+.pelicula-card h3 {
+  color: #ff3d00; /* Color del título en rojo brillante */
+  margin-bottom: 10px;
+}
+
+.pelicula-card p {
+  color: #cccccc; /* Texto gris claro */
+}
