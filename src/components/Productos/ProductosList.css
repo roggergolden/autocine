@@ -1,0 +1,12 @@
+.productos-list {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .productos, .combos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  

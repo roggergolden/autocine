@@ -1,0 +1,14 @@
+.funciones-list {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .funcion-item {
+    background-color: #292929;
+    padding: 15px;
+    border: 1px solid #ff3d00;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  

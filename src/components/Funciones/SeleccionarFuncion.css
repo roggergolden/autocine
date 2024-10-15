@@ -1,0 +1,21 @@
+.seleccionar-funcion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .funcion-card {
+    background-color: #292929;
+    color: #ffffff;
+    border: 1px solid #ff3d00;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .funcion-card:hover {
+    transform: scale(1.05);
+  }
+  

@@ -1,0 +1,29 @@
+/* Colores y ajustes para la barra de navegación */
+.header-appbar {
+  background-color: #1c1c1c; /* Fondo oscuro */
+  box-shadow: none;
+}
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  color: #ff3d00; /* Color rojo para el logo */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #ffffff; /* Texto blanco para los botones */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff3d00; /* Rojo en hover */
+}

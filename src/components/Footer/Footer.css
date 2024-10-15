@@ -1,0 +1,10 @@
+.footer {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  position: relative; /* Cambiado de fixed a relative */
+  width: 100%;
+  bottom: 0;
+  margin-top: 20px; /* Aseguramos que el footer tenga espacio arriba */
+}

@@ -1,0 +1,23 @@
+.pelicula-card {
+    background-color: #292929;
+    color: #ffffff;
+    border: 1px solid #ff3d00;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .pelicula-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .pelicula-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
