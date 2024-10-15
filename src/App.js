@@ -10,6 +10,7 @@ import RegistroUsuario from './pages/RegistroUsuario';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import SeleccionarFuncion from './components/Funciones/SeleccionarFuncion';
+import Registrar from './pages/Registrar';
 
 import { CarritoProvider } from './context/CarritoContext';  // Proveedor del contexto del carrito
 import { AuthProvider } from './context/AuthContext';        // Proveedor del contexto de autenticación
@@ -29,7 +30,6 @@ function App() {
             {/* Ruta para ver detalles de una película específica */}
             <Route path="/peliculas/:id_pelicula" element={<SeleccionarFuncion />} />
                         
-            
             {/* Ruta para ver los productos */}
             <Route path="/productos" element={<Productos />} />
             
@@ -38,6 +38,9 @@ function App() {
             
             {/* Ruta para el resumen del pedido */}
             <Route path="/resumen-pedido" element={<ResumenPedido />} />
+
+            {/* Ruta para registrar productos y películas */}
+            <Route path="/registrar" element={<Registrar />} />
             
             {/* Rutas de autenticación */}
             <Route path="/iniciar-sesion" element={<IniciarSesion />} />

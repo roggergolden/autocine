@@ -35,6 +35,11 @@ const Header = () => {
           <Button color="inherit">
             <Link to="/registro" className="nav-link">Registrarse</Link>
           </Button>
+
+          {/* Agregando la opción para "Registrar" productos y películas */}
+          <Button color="inherit">
+            <Link to="/registrar" className="nav-link">Registrar</Link>
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

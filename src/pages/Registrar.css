@@ -1,0 +1,91 @@
+/* Contenedor principal */
+.registrar-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo para el título principal */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+  }
+  
+  /* Estilos para las secciones */
+  .section {
+    margin-bottom: 50px;
+  }
+  
+  /* Sección de películas */
+  .peliculas-section h2 {
+    color: #ff3d00; /* Color rojo brillante */
+    margin-bottom: 20px;
+  }
+  
+  /* Sección de productos */
+  .productos-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de las tarjetas */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Ajustes para los formularios */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+  
+  /* Inputs, textarea y select */
+  input, textarea, select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  /* Botón de envío */
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    form {
+      max-width: 100%;
+    }
+  }
+  
